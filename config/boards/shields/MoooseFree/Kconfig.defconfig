@@ -1,0 +1,16 @@
+if SHIELD_MoooseFree_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "MoooseFree"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_MoooseFree_LEFT || SHIELD_MoooseFree_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif

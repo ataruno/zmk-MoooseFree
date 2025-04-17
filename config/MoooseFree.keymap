@@ -1,0 +1,230 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <behaviors/rgbled_widget.dtsi>
+
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 100   //スクロール量
+
+// Leyer
+#define ARROW 1
+#define NUM 2
+#define AHK 3
+#define FUNCTION 4
+// #define SCROLL 5
+// #define layer_6 6
+
+// Japanese
+#define JP_MINUS MINUS        // -
+#define JP_CARET EQUAL        // ^
+#define JP_YEN   INT3         // ¥
+#define JP_AT    LBKT         // @
+#define JP_LBKT  RBKT         // [
+#define JP_EISU  CAPS         // Eisu (英数)
+#define JP_SEMI  SEMI         // ;
+#define JP_COLON SQT          // :
+#define JP_RBKT  NUHS         // ]
+#define JP_COMMA COMMA        // ,
+#define JP_DOT   DOT          // .
+#define JP_SLASH SLASH        // /
+#define JP_BSLH  INT1         // (backslash)
+#define JP_MHEN  INT5         // Muhenkan (無変換)
+#define JP_HENK  INT4         // Henkan (変換)
+#define JP_EXCL  LS(N1)       // !
+#define JP_DQT   LS(N2)       // "
+#define JP_HASH  LS(N3)       // #
+#define JP_DLLR  LS(N4)       // $
+#define JP_PRCNT LS(N5)       // %
+#define JP_AMPS  LS(N6)       // &
+#define JP_SQT   LS(N7)       // '
+#define JP_LPAR  LS(N8)       // (
+#define JP_RPAR  LS(N9)       // )
+#define JP_EQUAL LS(JP_MINUS) // =
+#define JP_TILDE LS(JP_CARET) // ~
+#define JP_PIPE  LS(JP_YEN)   // |
+#define JP_GRAVE LS(JP_AT)    // `
+#define JP_LBRC  LS(JP_LBKT)  // {
+#define JP_CAPS  LS(JP_EISU)  // Caps Lock
+#define JP_PLUS  LS(JP_SEMI)  // +
+#define JP_ASTRK LS(JP_COLON) // *
+#define JP_RBRC  LS(JP_RBKT)  // }
+#define JP_LT    LS(JP_COMMA) // <
+#define JP_RT    LS(JP_DOT)   // >
+#define JP_QMARK LS(JP_SLASH) // ?
+#define JP_UNDER LS(JP_BSLH)  // _
+
+/ {
+    macros {
+        to_layer_0: to_layer_0 {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "TO_LAYER_0";
+        };
+        my_sp: my_sp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp JP_MHEN>
+                , <&macro_tap &kp LS(N3)>
+                ;
+        };
+        my_dq: my_dq {
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings = <&macro_tap &kp JP_MHEN>
+                , <&macro_tap &kp LS(N2)>
+                , <&macro_tap &kp LS(N2)>
+                ;
+        };
+        my_sq: my_sq {
+            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro";
+            bindings = <&macro_tap &kp JP_MHEN>
+                , <&macro_tap &kp LS(N7)>
+                , <&macro_tap &kp LS(N7)>
+                ;
+        };
+
+        my_kakko: my_kakko {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp JP_MHEN>
+                , <&macro_tap &kp LS(N8)>
+                , <&macro_tap &kp LS(N9)>
+                ;
+        };
+        my_br: my_br {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp JP_MHEN>
+                , <&macro_tap &kp JP_LT>
+                , <&macro_tap &kp B>
+                , <&macro_tap &kp R>
+                , <&macro_tap &kp JP_RT>
+                ;
+        };
+    };
+
+    behaviors {
+        lt_to_layer_0: lt_to_layer_0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_TO_0";
+            bindings = <&mo>, <&to_layer_0>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+        rot_kp: sensor_rotate_kp {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        };
+        rot_mkp: sensor_rotate_mkp {
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&mkp>, <&mkp>;
+        };
+        mouse_scroll: mouse_wheel_scrl{
+            compatible = "zmk,behavior-sensor-rotate-var";
+            #sensor-binding-cells = <2>;
+            bindings = <&msc>, <&msc>;
+            tap-ms = <20>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+        default_layer {
+            bindings = <
+                &kp TAB     &kp Q      &kp W    &kp E   &kp R   &kp T                                       &kp RIGHT
+                &kp LALT    &kp A      &kp S    &kp D   &kp F   &kp G                                       &kp LEFT
+                &kp LSHIFT  &kp Z      &kp X    &kp C   &kp V   &kp B                            &kp C_MUTE &kp DOWN
+                &kp LCTRL   &kp LWIN   &kp LALT &lt_to_layer_0 4 TAB                &kp DEL      &kp ESC    &kp UP
+                                                &kp BSPC   &kp SPACE   &lt_to_layer_0 2 JP_HENK  &kp PSCRN  &none
+                &kp C   &kp D          &bt BT_SEL 4  &bt BT_SEL 5   &bt BT_SEL 6                          &kp I
+
+                &kp UP                              &kp Y       &kp U          &kp I          &kp O        &kp P         &kp JP_YEN
+                &kp DOWN                             &kp H       &kp J          &kp K          &kp L        &kp JP_SEMI   &kp JP_COLON
+                &kp RIGHT  &kp PSCRN                 &kp N       &kp M          &kp JP_COMMA   &kp JP_DOT   &kp JP_SLASH  &kp RSHIFT
+                &kp LEFT    &mkp LCLK  &mkp RCLK                                 &lt_to_layer_0 3 ESC        &kp JP_LBKT   &kp JP_RBKT   &kp JP_AT
+                &none  &mkp MCLK  &lt_to_layer_0 1 JP_MHEN  &kp ENTER   &kp MINUS
+                &kp C             &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3         &bt BT_CLR   &bt BT_CLR_ALL
+            >;
+            sensor-bindings =
+                <&mouse_scroll SCRL_DOWN SCRL_UP>,
+                <&mouse_scroll SCRL_UP SCRL_DOWN>;
+        };
+        ARROW {
+            bindings = <
+                &kp TAB     &kp Q      &kp W    &kp E   &kp R   &kp T                          &kp UP
+                &kp LALT    &kp A      &kp S    &kp D   &kp F   &kp G                          &kp DOWN
+                &kp LSHIFT  &kp Z      &kp X    &kp C   &kp V   &kp B               &kp C_MUTE &kp RIGHT
+                &kp LCTRL   &kp LWIN   &kp LALT &kp TAB                &kp C_MUTE   &kp ESC    &kp LEFT
+                                                &kp BSPC   &kp SPACE   &kp JP_HENK  &kp PSCRN  &none
+                &kp C   &kp D           &kp F   &kp G   &kp H                       &kp I
+
+                &kp UP                             &kp LCLK      &kp HOME       &kp UP         &kp END      &mkp RCLK     &kp JP_YEN
+                &kp DOWN                           &mkp MB5      &kp LEFT       &kp DOWN       &kp RIGHT    &kp JP_SEMI   &kp JP_COLON
+                &kp RIGHT  &kp PSCRN               &mkp MB4      &my_sp         &my_dq         &my_kakko    &my_sq  &kp RSHIFT
+                &kp LEFT   &mkp LCLK  &mkp RCLK                                 &kp ESC        &kp JP_LBKT  &kp JP_RBKT   &kp JP_AT
+                &none      &mkp MCLK  &kp JP_MHEN  &my_br &kp JP_UNDER
+                &kp C           &kp D   &kp E   &kp PSCRN           &kp G   &kp H
+            >;
+            sensor-bindings = <&mouse_scroll SCRL_UP SCRL_DOWN &mouse_scroll SCRL_UP SCRL_DOWN>;
+        };
+        NUM {
+            bindings = <
+                &kp TAB     &kp Q      &kp W           &kp LG(UP)       &kp R           &kp LA(LS(TAB))                  &kp UP
+                &kp LALT    &kp A      &kp LG(LEFT)    &kp LC(LA(TAB))  &kp LG(RIGHT)   &kp LA(TAB)                      &kp DOWN
+                &kp LSHIFT  &kp Z      &kp X           &kp LG(DOWN)     &kp LG(T)       &kp LG(TAB)         &kp C_MUTE   &kp RIGHT
+                &kp LCTRL   &kp LWIN   &kp LALT        &kp TAB                          &kp C_MUTE          &kp F13      &kp LEFT
+                                                                   &kp BSPC   &kp SPACE &kp JP_HENK         &kp F14      &none
+                &kp C   &kp D           &kp F   &kp G   &kp H                       &kp I
+
+                &kp UP                             &kp ASTRK         &kp KP_N7       &kp KP_N8    &kp KP_N9       &kp MINUS     &kp JP_YEN
+                &kp DOWN                           &kp KP_SLASH      &kp KP_N4       &kp KP_N5    &kp KP_N6       &kp PLUS      &kp JP_COLON
+                &kp RIGHT  &kp PSCRN               &kp SEMI          &kp KP_N1       &kp KP_N2    &kp KP_N3       &kp CARET     &kp RSHIFT
+                &kp LEFT   &mkp LCLK  &mkp RCLK                                      &kp KP_N0    &kp KP_DOT      &kp COMMA     &kp JP_AT
+                &none  &mkp MCLK  &kp JP_MHEN  &kp ENTER   &kp MINUS
+                &kp C           &kp D   &kp E   &kp PSCRN           &kp G   &kp H
+            >;
+            sensor-bindings = <&mouse_scroll SCRL_UP SCRL_DOWN &mouse_scroll SCRL_UP SCRL_DOWN>;
+        };
+        AHK {
+            bindings = <
+                &kp TAB     &kp F15      &kp F16      &kp F17      &kp F18       &kp F19                  &kp UP
+                &kp LALT    &kp LC(F15)  &kp LC(F16)  &kp LC(F17)  &kp LC(F18)   &kp LC(F19)              &kp DOWN
+                &kp LSHIFT  &kp LS(F15)  &kp LS(F16)  &kp LS(F17)  &kp LS(F18)   &kp LS(F19)   &kp C_MUTE &kp RIGHT
+                &kp LCTRL   &kp LWIN   &kp LALT &kp TAB                          &kp DEL       &kp ESC    &kp LEFT
+                                                          &kp BSPC   &kp SPACE   &kp JP_HENK   &kp PSCRN  &kp ENTER
+                &kp C   &kp D           &kp F   &kp G   &kp H                       &kp I
+
+                &kp UP                               &kp F20     &kp F21        &kp F22        &kp F23      &kp F24       &kp JP_YEN
+                &kp DOWN                             &kp LC(F20) &kp LC(F21)    &kp LC(F22)    &kp LC(F23)  &kp LC(F24)   &kp JP_COLON
+                &kp RIGHT  &kp PSCRN                 &kp LS(F20) &kp LS(F21)    &kp LS(F22)    &kp LS(F23)  &kp LS(F24)   &kp RSHIFT
+                &kp LEFT   &mkp LCLK  &mkp RCLK                                 &kp TAB        &kp JP_LBKT  &kp JP_RBKT   &kp JP_AT
+                &none  &mkp MCLK  &lt_to_layer_0 1 JP_MHEN  &kp ENTER   &kp MINUS
+                &kp C           &kp D   &kp E        &kp PSCRN           &kp G   &kp H
+            >;
+            sensor-bindings = <&rot_kp C_VOL_DN C_VOL_UP &rot_kp C_VOL_UP C_VOL_DN>;
+        };
+        FUNCTION {
+            bindings = <
+                &kp TAB     &kp LS(N1)   &kp LS(N2)   &kp LS(N3)   &kp LS(N4)    &kp LS(N5)               &kp UP
+                &kp LALT    &kp LA(N1)   &kp LA(N2)   &kp LA(N3)   &kp LA(N4)    &kp LA(N5)               &kp DOWN
+                &kp LSHIFT  &kp F1       &kp F2       &kp F3       &kp F4        &kp F5        &kp C_MUTE &kp RIGHT
+                &kp LCTRL   &kp LWIN   &kp LALT &kp TAB                          &kp DEL       &kp ESC    &kp LEFT
+                                                          &kp BSPC   &kp SPACE   &kp JP_HENK   &kp PSCRN  &none
+                &kp C   &kp D           &kp F   &kp G   &kp H                       &kp I
+
+                &kp UP                               &kp LS(N6)  &kp LS(N7)     &kp LS(N8)     &kp LS(N9)   &kp LS(N0)    &kp JP_YEN
+                &kp DOWN                             &kp LC(N6)  &kp LC(N7)     &kp LC(N8)     &kp LC(N9)   &kp LC(N0)    &kp JP_COLON
+                &kp RIGHT  &kp PSCRN                 &kp F6      &kp F7         &kp F8         &kp F9       &kp F10       &kp RSHIFT
+                &kp LEFT   &mkp LCLK  &mkp RCLK                                 &kp TAB        &kp JP_LBKT  &kp JP_RBKT   &kp JP_AT
+                &none  &mkp MCLK  &lt_to_layer_0 1 JP_MHEN  &kp ENTER   &kp MINUS
+                &kp C           &kp D   &kp E        &kp PSCRN           &kp G   &kp H
+            >;
+            sensor-bindings = <&rot_kp C_VOL_DN C_VOL_UP &rot_kp C_VOL_UP C_VOL_DN>;
+        };
+    };
+};
