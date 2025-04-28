@@ -151,8 +151,8 @@
                 &kp C             &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3         &bt BT_CLR   &bt BT_CLR_ALL &kp G   &kp H
             >;
             sensor-bindings =
-                <&mouse_scroll SCRL_DOWN SCRL_UP>,
-                <&mouse_scroll SCRL_UP SCRL_DOWN>;
+                <&mouse_scroll SCRL_UP SCRL_DOWN>,
+                <&mouse_scroll SCRL_DOWN SCRL_UP>;
         };
         ARROW {
             bindings = <
