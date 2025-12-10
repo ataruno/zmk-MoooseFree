@@ -147,7 +147,7 @@
                 &kp RIGHT  &kp PSCRN                 &kp N       &kp M          &kp JP_COMMA   &kp JP_DOT   &kp JP_SLASH  &kp RSHIFT
                 &kp LEFT    &mkp LCLK  &mkp RCLK                                 &lt_to_layer_0 3 ESC        &kp JP_LBKT   &kp JP_RBKT   &kp JP_AT
                 &none  &mkp MCLK  &lt_to_layer_0 1 JP_MHEN  &kp ENTER   &kp MINUS
-                &bt BT_CLR_ALL             &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3         &kp A   &kp B   &kp G   &kp H
+                &bt BT_CLR_ALL             &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3         &kp A   &kp B   &kp G   &kp J
             >;
             sensor-bindings =
                 <&mouse_scroll SCRL_UP SCRL_DOWN>,
