@@ -4,14 +4,16 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: ataruno-git
       url-base: https://github.com/ataruno
+    - name: pmw3610-badjeff
+      url-base: https://github.com/badjeff
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
     - name: zmk-pmw3610-driver
-      remote: ataruno-git
-      revision: main
+      remote: pmw3610-badjeff
+      revision: zmk-0.4
     - name: zmk-rgbled-widget
       remote: ataruno-git
       revision: main
