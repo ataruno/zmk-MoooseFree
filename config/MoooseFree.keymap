@@ -163,7 +163,7 @@
                 &none  &mkp MCLK  &lt_to_layer_0 1 JP_MHEN  &kp ENTER   &kp MINUS
                 &bt BT_CLR_ALL             &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4   &bt BT_SEL 5   &bt BT_CLR   &bootloader 
             >;
-            sensor-bindings = <&mouse_scroll2 SCRL_UP SCRL_DOWN>, <&mouse_scroll SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&mouse_scroll_safe 1 1>, <&mouse_scroll_safe -1 1>;
         };
         ARROW {
             bindings = <
