@@ -146,14 +146,14 @@
                 &kp LSHIFT  &kp Z      &kp X    &kp C   &kp V   &kp B                            &kp C_MUTE &kp DOWN
                 &kp LCTRL   &kp LWIN   &kp LALT &lt_to_layer_0 4 TAB                &kp DEL      &kp ESC    &kp UP
                                                 &kp BSPC   &kp SPACE   &lt_to_layer_0 2 JP_HENK  &kp PSCRN  &none
-                &kp C   &kp D &kp C   &kp D     &bt BT_SEL 4  &bt BT_SEL 5   &bt BT_SEL 6                   &bt BT_CLR
+                &bootloader &kp D &kp C   &kp D     &bt BT_SEL 4  &bt BT_SEL 5   &bt BT_SEL 6                   &bt BT_CLR
 
                 &kp UP                              &kp Y       &kp U          &kp I          &kp O        &kp P         &kp JP_YEN
                 &kp DOWN                             &kp H       &kp J          &kp K          &kp L        &kp JP_SEMI   &kp JP_COLON
                 &kp RIGHT  &kp PSCRN                 &kp N       &kp M          &kp JP_COMMA   &kp JP_DOT   &kp JP_SLASH  &kp RSHIFT
                 &kp LEFT    &mkp LCLK  &mkp RCLK                                 &lt_to_layer_0 3 ESC        &kp JP_LBKT   &kp JP_RBKT   &kp JP_AT
                 &none  &mkp MCLK  &lt_to_layer_0 1 JP_MHEN  &kp ENTER   &kp MINUS
-                &bt BT_CLR_ALL             &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3         &kp A   &kp B   &kp G   &kp J
+                &bt BT_CLR_ALL             &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4   &bt BT_SEL 5   &bt BT_CLR   &bootloader 
             >;
             sensor-bindings = <&mouse_scroll2 SCRL_UP SCRL_DOWN>, <&mouse_scroll SCRL_DOWN SCRL_UP>;
         };
@@ -173,7 +173,7 @@
                 &none      &mkp MCLK  &kp JP_MHEN  &my_br &kp JP_UNDER
                 &kp C           &kp D   &kp E   &kp PSCRN           &kp G   &kp H &kp G   &kp H
             >;
-            sensor-bindings = <&mouse_scroll SCRL_DOWN SCRL_UP>, <&mouse_scroll SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&mouse_scroll2 SCRL_UP SCRL_DOWN>, <&mouse_scroll SCRL_DOWN SCRL_UP>;
         };
         NUM {
             bindings = <
@@ -191,7 +191,7 @@
                 &none  &mkp MCLK  &kp JP_MHEN  &kp ENTER   &kp MINUS
                 &kp C           &kp D   &kp E   &kp PSCRN           &kp G   &kp H &kp G   &kp H
             >;
-            sensor-bindings = <&mouse_scroll SCRL_DOWN SCRL_UP>, <&mouse_scroll SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&mouse_scroll2 SCRL_UP SCRL_DOWN>, <&mouse_scroll SCRL_DOWN SCRL_UP>;
         };
         AHK {
             bindings = <
