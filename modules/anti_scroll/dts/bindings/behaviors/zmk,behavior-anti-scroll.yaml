@@ -1,0 +1,30 @@
+# SPDX-License-Identifier: MIT
+
+description: Anti-scroll rotate behavior with runaway protection
+
+compatible: "zmk,behavior-anti-scroll"
+
+include: one_param.yaml
+
+properties:
+  cooldown-ms:
+    type: int
+    required: false
+    default: 200
+    description: Time to ignore events after runaway detected
+
+  window-ms:
+    type: int
+    required: false
+    default: 100
+    description: Time window to count events
+
+  threshold:
+    type: int
+    required: false
+    default: 20
+    description: Number of events in window to trigger runaway
+
+sensor-binding-cells:
+  - step
+  - direction
