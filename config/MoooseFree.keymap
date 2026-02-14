@@ -119,6 +119,11 @@
             bindings = <&kp>, <&kp>;
             tap-ms = <30>;
         };
+        rot_kp2: sensor_rotate_kp2 {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_VOL_DN>, <&kp C_VOL_UP>;
+        };
         rot_mkp: sensor_rotate_mkp {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
@@ -211,7 +216,7 @@
                 &none  &mkp MCLK  &lt_to_layer_0 1 JP_MHEN  &kp ENTER   &kp MINUS
                 &kp C           &kp D   &kp E        &kp PSCRN           &kp G   &kp H &kp G   &kp H
             >;
-            sensor-bindings = <&rot_kp C_VOL_DN C_VOL_UP &rot_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&rot_kp2 &rot_kp2>;
         };
         FUNCTION {
             bindings = <
@@ -229,7 +234,7 @@
                 &none  &mkp MCLK  &lt_to_layer_0 1 JP_MHEN  &kp ENTER   &kp MINUS
                 &kp C           &kp D   &kp E        &kp PSCRN           &kp G   &kp H &kp G   &kp H
             >;
-            sensor-bindings = <&rot_kp C_VOL_DN C_VOL_UP &rot_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&rot_kp2 &rot_kp2>;
         };
     };
 };
