@@ -157,7 +157,7 @@
                 &none  &mkp MCLK  &lt_to_layer_0 1 JP_MHEN  &kp ENTER   &kp MINUS
                 &bt BT_CLR_ALL             &bt BT_SEL 1    &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4   &bt BT_SEL 5   &bt BT_CLR   &bootloader 
             >;
-            sensor-bindings = <&mouse_scroll2 SCRL_UP SCRL_DOWN &mouse_scroll SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&mouse_scroll2 SCRL_UP SCRL_DOWN &mouse_scroll SCRL_UP SCRL_DOWN>;
         };
         ARROW {
             bindings = <
@@ -175,7 +175,7 @@
                 &none      &mkp MCLK  &kp JP_MHEN  &my_br &kp JP_UNDER
                 &kp C           &kp D   &kp E   &kp PSCRN           &kp G   &kp H &kp G   &kp H
             >;
-            sensor-bindings = <&mouse_scroll2 SCRL_UP SCRL_DOWN &mouse_scroll SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&mouse_scroll2 SCRL_UP SCRL_DOWN &mouse_scroll SCRL_UP SCRL_DOWN>;
         };
         NUM {
             bindings = <
@@ -193,7 +193,7 @@
                 &none  &mkp MCLK  &kp JP_MHEN  &kp ENTER   &kp MINUS
                 &kp C           &kp D   &kp E   &kp PSCRN           &kp G   &kp H &kp G   &kp H
             >;
-            sensor-bindings = <&mouse_scroll2 SCRL_UP SCRL_DOWN &mouse_scroll SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&mouse_scroll2 SCRL_UP SCRL_DOWN &mouse_scroll SCRL_UP SCRL_DOWN>;
         };
         AHK {
             bindings = <
@@ -211,7 +211,7 @@
                 &none  &mkp MCLK  &lt_to_layer_0 1 JP_MHEN  &kp ENTER   &kp MINUS
                 &kp C           &kp D   &kp E        &kp PSCRN           &kp G   &kp H &kp G   &kp H
             >;
-            sensor-bindings = <&rot_kp C_VOL_DN C_VOL_UP &rot_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&rot_kp C_VOL_DN C_VOL_UP &rot_kp C_VOL_UP C_VOL_DN>;
         };
         FUNCTION {
             bindings = <
@@ -229,7 +229,7 @@
                 &none  &mkp MCLK  &lt_to_layer_0 1 JP_MHEN  &kp ENTER   &kp MINUS
                 &kp C           &kp D   &kp E        &kp PSCRN           &kp G   &kp H &kp G   &kp H
             >;
-            sensor-bindings = <&rot_kp C_VOL_DN C_VOL_UP &rot_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&rot_kp C_VOL_DN C_VOL_UP &rot_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
