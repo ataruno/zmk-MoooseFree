@@ -4,8 +4,6 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: ataruno-git
       url-base: https://github.com/ataruno
-    - name: caksoylar
-      url-base: https://github.com/caksoylar
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -15,7 +13,7 @@ manifest:
       remote: ataruno-git
       revision: zmk-0.4-disablingbustread
     - name: zmk-rgbled-widget
-      remote: caksoylar
-      revision: main
+      remote: ataruno-git
+      revision: zephyr4.1
   self:
     path: config
