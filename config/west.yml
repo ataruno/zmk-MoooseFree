@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: ataruno-git
       url-base: https://github.com/ataruno
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -13,7 +15,7 @@ manifest:
       remote: ataruno-git
       revision: main
     - name: zmk-rgbled-widget
-      remote: ataruno-git
+      remote: caksoylar
       revision: main
   self:
     path: config
