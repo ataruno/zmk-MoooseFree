@@ -168,7 +168,7 @@
                                                 &kp BSPC   &kp SPACE   &kp JP_HENK  &kp PSCRN  &none
                 &kp C   &kp D   &kp C   &kp D        &kp F   &kp G   &kp H                       &kp I
 
-                &kp UP                             &kp LCLK      &kp HOME       &kp UP         &kp END      &mkp RCLK     &kp JP_YEN
+                &kp UP                             &kp LCLK      &kp HOME       &kp UP         &kp END      &kp K_APP     &kp JP_YEN
                 &kp DOWN                           &mkp MB5      &kp LEFT       &kp DOWN       &kp RIGHT    &kp JP_SEMI   &kp JP_COLON
                 &kp RIGHT  &kp PSCRN               &mkp MB4      &my_sp         &my_dq         &my_kakko    &my_sq  &kp RSHIFT
                 &kp LEFT   &mkp LCLK  &mkp RCLK                                 &kp ESC        &kp JP_LBKT  &kp JP_RBKT   &kp JP_AT
