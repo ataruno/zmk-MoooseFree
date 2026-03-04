@@ -185,7 +185,7 @@
         compatible = "alps,ec11";
         a-gpios = <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <18>;
+        steps = <24>;
         status = "disabled";
     };
 
@@ -194,7 +194,7 @@
         sensors = <&left_encoder &right_encoder>;
 
         left_config {
-            triggers-per-rotation = <10>;
+            triggers-per-rotation = <12>;
         };
 
         right_config {
