@@ -6,7 +6,7 @@
 #include <behaviors/rgbled_widget.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 60
 
 // Leyer
 #define ARROW 1
