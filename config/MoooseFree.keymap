@@ -198,13 +198,13 @@
             bindings = <
 &kp TAB     &kp KP_SLASH    &kp N7          &kp N8            &kp N9        &kp MINUS          &kp RIGHT
 &kp LALT    &mt LALT ASTRK  &kp N4          &kp N5            &kp N6        &kp PLUS           &kp LEFT
-&kp LSHIFT  &mt LALT N0     &kp N1          &kp N2            &kp N3        &kp EQUAL          &kp C_MUTE     &kp DOWN
+&kp LSHIFT  &mt LALT N0     &kp N1          &kp N2            &kp N3        &kp LS(MINUS)      &kp C_MUTE     &kp DOWN
 &kp LCTRL   &trans          &trans          &trans            &kp C_MUTE    &kp ESC            &kp UP
 &trans      &mt LSHIFT F10  &trans          &kp PSCRN         &none
 &kp C       &kp D           &kp C           &kp D             &kp F         &kp G              &kp H          &kp I
-&kp UP      &shift_space    &mkp MB4        &kp UP            &mkp MB5      &mt LCTRL SPACE    &kp INT3
+&kp UP      &shift_space    &mkp MB4        &kp UP            &mkp MB5      &kp LC(SPACE)      &kp INT3
 &kp DOWN    &kp LC(LS(N9))  &kp LEFT        &kp DOWN          &kp RIGHT     &kp DEL            &kp SQT
-&kp RIGHT   &kp PSCRN       &mt LSHIFT F10  &kp LS(LG(LEFT))  &kp LA(DOWN)  &kp LS(LG(RIGHT))  &kp LC(LA(L))  &kp RSHIFT
+&kp RIGHT   &kp PSCRN       &kp LS(F10)     &kp LS(LG(LEFT))  &kp LA(DOWN)  &kp LS(LG(RIGHT))  &kp LC(LA(L))  &kp RSHIFT
 &kp LEFT    &mkp LCLK       &mkp RCLK       &kp ESC           &kp RBKT      &trans             &kp LBKT
 &none       &mkp MCLK       &trans          &trans            &kp LS(INT1)
 &kp C       &kp D           &kp E           &kp PSCRN         &kp G         &kp H              &kp G          &kp H
@@ -219,7 +219,7 @@
 &kp LALT    &kp AT            &kp LS(N7)    &kp LS(N4)  &none         &kp LS(AT)     &kp LEFT
 &kp LSHIFT  &none             &none         &kp CARET   &kp LS(INT3)  &none          &kp C_MUTE  &kp DOWN
 &kp LCTRL   &none             &none         &none       &kp C_MUTE    &kp F13        &kp UP
-&trans      &mt LSHIFT SPACE  &none         &kp F14     &none
+&trans      &kp LS(SPACE)     &none         &kp F14     &none
 &kp C       &kp D             &kp C         &kp D       &kp F         &kp G          &kp H       &kp I
 &kp UP      &kp INT3          &kp LS(INT3)  &none       &none         &kp LS(N5)     &kp INT3
 &kp DOWN    &kp LS(N3)        &none         &none       &none         &none          &kp SQT
@@ -240,7 +240,7 @@
 &kp LCTRL   &kp LC(LA(DEL))  &none      &none         &kp DEL      &kp ESC  &kp UP
 &none       &none            &kp CAPS   &kp PSCRN     &kp ENTER
 &kp C       &kp D            &kp C      &kp D         &kp F        &kp G    &kp H       &kp I
-&kp UP      &kp HOME         &kp PG_UP  &kp LC(SEMI)  &kp LC(SQT)  &tog 5   &kp INT3
+&kp UP      &kp HOME         &kp PG_UP  &kp LC(SEMI)  &kp LC(COLON)  &tog 5   &kp INT3
 &kp DOWN    &kp END          &kp PG_DN  &none         &none        &none    &kp SQT
 &kp RIGHT   &kp PSCRN        &none      &none         &none        &none    &none       &kp RSHIFT
 &kp LEFT    &mkp LCLK        &mkp RCLK  &kp TAB       &kp RBKT     &none    &kp LBKT
