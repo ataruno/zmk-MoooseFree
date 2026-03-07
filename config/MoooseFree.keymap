@@ -181,7 +181,7 @@
 &kp LALT         &mt LALT A        &kp S                 &kp D                 &kp F         &kp G         &kp LEFT
 &kp LSHIFT       &kp Z             &kp X                 &kp C                 &kp V         &kp B         &kp C_MUTE    &kp DOWN
 &kp LCTRL        &lt 4 ESC         &kp LWIN              &mt LSHIFT F10        &kp DEL       &kp ESC       &kp UP
-&mt LCTRL LANG5  &mt LSHIFT SPACE  &mt LC(LSHIFT) MINUS  &kp PSCRN             &none
+&mt LCTRL GRAVE  &mt LSHIFT SPACE  &mt LC(LSHIFT) MINUS  &kp PSCRN             &none
 &bootloader      &kp D             &kp C                 &kp D                 &bt BT_SEL 4  &bt BT_SEL 5  &bt BT_SEL 6  &bt BT_CLR
 &kp UP           &kp Y             &kp U                 &kp I                 &kp O         &kp P         &kp INT3
 &kp DOWN         &kp H             &kp J                 &kp K                 &kp L         &kp BSPC      &kp SQT
@@ -196,18 +196,18 @@
 
         ARROW {
             bindings = <
-&kp TAB     &kp KP_SLASH    &kp N7          &kp N8            &kp N9        &kp MINUS          &kp RIGHT
-&kp LALT    &mt LALT ASTRK  &kp N4          &kp N5            &kp N6        &kp PLUS           &kp LEFT
-&kp LSHIFT  &mt LALT N0     &kp N1          &kp N2            &kp N3        &kp LS(MINUS)      &kp C_MUTE     &kp DOWN
-&kp LCTRL   &trans          &trans          &trans            &kp C_MUTE    &kp ESC            &kp UP
-&trans      &mt LSHIFT F10  &trans          &kp PSCRN         &none
-&kp C       &kp D           &kp C           &kp D             &kp F         &kp G              &kp H          &kp I
-&kp UP      &shift_space    &mkp MB4        &kp UP            &mkp MB5      &kp LC(SPACE)      &kp INT3
-&kp DOWN    &kp LC(LS(N9))  &kp LEFT        &kp DOWN          &kp RIGHT     &kp DEL            &kp SQT
-&kp RIGHT   &kp PSCRN       &kp LS(F10)     &kp LS(LG(LEFT))  &kp LA(DOWN)  &kp LS(LG(RIGHT))  &kp LC(LA(L))  &kp RSHIFT
-&kp LEFT    &mkp LCLK       &mkp RCLK       &kp ESC           &kp RBKT      &trans             &kp LBKT
-&none       &mkp MCLK       &trans          &trans            &kp LS(INT1)
-&kp C       &kp D           &kp E           &kp PSCRN         &kp G         &kp H              &kp G          &kp H
+&kp TAB     &kp KP_SLASH          &kp N7       &kp N8            &kp N9        &kp KP_MINUS       &kp RIGHT
+&kp LALT    &mt LALT KP_ASTERISK  &kp N4       &kp N5            &kp N6        &kp KP_PLUS        &kp LEFT
+&kp LSHIFT  &mt LALT N0           &kp N1       &kp N2            &kp N3        &kp LS(MINUS)      &kp C_MUTE     &kp DOWN
+&kp LCTRL   &trans                &trans       &trans            &kp C_MUTE    &kp ESC            &kp UP
+&trans      &mt LSHIFT F10        &trans       &kp PSCRN         &none
+&kp C       &kp D                 &kp C        &kp D             &kp F         &kp G              &kp H          &kp I
+&kp UP      &shift_space          &mkp MB4     &kp UP            &mkp MB5      &kp LC(SPACE)      &kp INT3
+&kp DOWN    &kp LC(LS(N9))        &kp LEFT     &kp DOWN          &kp RIGHT     &kp DEL            &kp SQT
+&kp RIGHT   &kp PSCRN             &kp LS(F10)  &kp LS(LG(LEFT))  &kp LA(DOWN)  &kp LS(LG(RIGHT))  &kp LC(LA(L))  &kp RSHIFT
+&kp LEFT    &mkp LCLK             &mkp RCLK    &kp ESC           &kp RBKT      &trans             &kp LBKT
+&none       &mkp MCLK             &trans       &trans            &kp LS(INT1)
+&kp C       &kp D                 &kp E        &kp PSCRN         &kp G         &kp H              &kp G          &kp H
             >;
 
             sensor-bindings = <&inc_dec_kp LC(LS(TAB)) LC(TAB) &inc_dec_kp LC(LS(TAB)) LC(TAB)>;
@@ -215,18 +215,18 @@
 
         NUM {
             bindings = <
-&kp TAB     &kp LS(SLASH)     &kp LS(N2)    &kp LS(N1)  &none         &kp LS(CARET)  &kp RIGHT
-&kp LALT    &kp AT            &kp LS(N7)    &kp LS(N4)  &none         &kp LS(AT)     &kp LEFT
-&kp LSHIFT  &none             &none         &kp CARET   &kp LS(INT3)  &none          &kp C_MUTE  &kp DOWN
-&kp LCTRL   &none             &none         &none       &kp C_MUTE    &kp F13        &kp UP
-&trans      &kp LS(SPACE)     &none         &kp F14     &none
-&kp C       &kp D             &kp C         &kp D       &kp F         &kp G          &kp H       &kp I
-&kp UP      &kp INT3          &kp LS(INT3)  &none       &none         &kp LS(N5)     &kp INT3
-&kp DOWN    &kp LS(N3)        &none         &none       &none         &none          &kp SQT
-&kp RIGHT   &kp PSCRN         &kp LS(N6)    &none       &kp SEMI      &kp SQT        &none       &kp RSHIFT
-&kp LEFT    &mkp LCLK         &mkp RCLK     &kp N0      &kp KP_DOT    &none          &kp LBKT
-&none       &mkp MCLK         &trans        &trans      &kp MINUS
-&kp C       &kp D             &kp E         &kp PSCRN   &kp G         &kp H          &kp G       &kp H
+&kp TAB     &kp LS(SLASH)  &kp LS(N2)    &kp LS(N1)  &none         &kp LS(CARET)  &kp RIGHT
+&kp LALT    &kp AT         &kp LS(N7)    &kp LS(N4)  &none         &kp LS(AT)     &kp LEFT
+&kp LSHIFT  &none          &none         &kp CARET   &kp LS(INT3)  &none          &kp C_MUTE  &kp DOWN
+&kp LCTRL   &none          &none         &none       &kp C_MUTE    &kp F13        &kp UP
+&trans      &kp LS(SPACE)  &none         &kp F14     &none
+&kp C       &kp D          &kp C         &kp D       &kp F         &kp G          &kp H       &kp I
+&kp UP      &kp INT3       &kp LS(INT3)  &none       &none         &kp LS(N5)     &kp INT3
+&kp DOWN    &kp LS(N3)     &none         &none       &none         &none          &kp SQT
+&kp RIGHT   &kp PSCRN      &kp LS(N6)    &none       &kp SEMI      &kp SQT        &none       &kp RSHIFT
+&kp LEFT    &mkp LCLK      &mkp RCLK     &kp N0      &kp KP_DOT    &none          &kp LBKT
+&none       &mkp MCLK      &trans        &trans      &kp MINUS
+&kp C       &kp D          &kp E         &kp PSCRN   &kp G         &kp H          &kp G       &kp H
             >;
 
             sensor-bindings = <&inc_dec_kp LC(LS(TAB)) LC(TAB) &inc_dec_kp LC(LS(TAB)) LC(TAB)>;
@@ -234,18 +234,18 @@
 
         AHK {
             bindings = <
-&kp TAB     &none            &kp F7     &kp F8        &kp F9       &kp F10  &kp RIGHT
-&kp LALT    &kp LC(LA(V))    &kp F4     &kp F5        &kp F6       &kp F11  &kp LEFT
-&kp LSHIFT  &kp LC(SEMI)     &kp F1     &kp F2        &kp F3       &kp F12  &kp C_MUTE  &kp DOWN
-&kp LCTRL   &kp LC(LA(DEL))  &none      &none         &kp DEL      &kp ESC  &kp UP
+&kp TAB     &none            &kp F7     &kp F8        &kp F9         &kp F10  &kp RIGHT
+&kp LALT    &kp LC(LA(V))    &kp F4     &kp F5        &kp F6         &kp F11  &kp LEFT
+&kp LSHIFT  &kp LC(SEMI)     &kp F1     &kp F2        &kp F3         &kp F12  &kp C_MUTE  &kp DOWN
+&kp LCTRL   &kp LC(LA(DEL))  &none      &none         &kp DEL        &kp ESC  &kp UP
 &none       &none            &kp CAPS   &kp PSCRN     &kp ENTER
-&kp C       &kp D            &kp C      &kp D         &kp F        &kp G    &kp H       &kp I
+&kp C       &kp D            &kp C      &kp D         &kp F          &kp G    &kp H       &kp I
 &kp UP      &kp HOME         &kp PG_UP  &kp LC(SEMI)  &kp LC(COLON)  &tog 5   &kp INT3
-&kp DOWN    &kp END          &kp PG_DN  &none         &none        &none    &kp SQT
-&kp RIGHT   &kp PSCRN        &none      &none         &none        &none    &none       &kp RSHIFT
-&kp LEFT    &mkp LCLK        &mkp RCLK  &kp TAB       &kp RBKT     &none    &kp LBKT
+&kp DOWN    &kp END          &kp PG_DN  &none         &none          &none    &kp SQT
+&kp RIGHT   &kp PSCRN        &none      &none         &none          &none    &none       &kp RSHIFT
+&kp LEFT    &mkp LCLK        &mkp RCLK  &kp TAB       &kp RBKT       &none    &kp LBKT
 &none       &mkp MCLK        &none      &none         &kp MINUS
-&kp C       &kp D            &kp E      &kp PSCRN     &kp G        &kp H    &kp G       &kp H
+&kp C       &kp D            &kp E      &kp PSCRN     &kp G          &kp H    &kp G       &kp H
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP>;
