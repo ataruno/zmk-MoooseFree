@@ -180,7 +180,7 @@
 &kp TAB          &kp Q             &kp W                 &kp E                 &kp R         &kp T         &kp RIGHT
 &kp LALT         &mt LALT A        &kp S                 &kp D                 &kp F         &kp G         &kp LEFT
 &kp LSHIFT       &kp Z             &kp X                 &kp C                 &kp V         &kp B         &kp C_MUTE    &kp DOWN
-&kp LCTRL        &lt 4 ESC         &kp LWIN              &mt LSHIFT F10        &kp DEL       &kp ESC       &kp UP
+&kp LCTRL        &lt 4 ESC         &kp LWIN              &kp LS(F10)           &kp DEL       &kp ESC       &kp UP
 &mt LCTRL GRAVE  &mt LSHIFT SPACE  &mt LC(LSHIFT) MINUS  &kp PSCRN             &none
 &bootloader      &kp D             &kp C                 &kp D                 &bt BT_SEL 4  &bt BT_SEL 5  &bt BT_SEL 6  &bt BT_CLR
 &kp UP           &kp Y             &kp U                 &kp I                 &kp O         &kp P         &kp INT3
@@ -215,13 +215,13 @@
 
         NUM {
             bindings = <
-&kp TAB     &kp LS(SLASH)  &kp LS(N2)    &kp LS(N1)  &none         &kp LS(CARET)  &kp RIGHT
-&kp LALT    &kp AT         &kp LS(N7)    &kp LS(N4)  &none         &kp LS(AT)     &kp LEFT
-&kp LSHIFT  &none          &none         &kp CARET   &kp LS(INT3)  &none          &kp C_MUTE  &kp DOWN
+&kp TAB     &kp LS(SLASH)  &kp LS(N2)    &kp LS(N1)  &none         &kp LS(EQUAL)  &kp RIGHT
+&kp LALT    &kp LBKT       &kp LS(N7)    &kp LS(N4)  &none         &kp LS(LBKT)   &kp LEFT
+&kp LSHIFT  &none          &none         &kp EQUAL   &kp LS(INT3)  &none          &kp C_MUTE  &kp DOWN
 &kp LCTRL   &none          &none         &none       &kp C_MUTE    &kp F13        &kp UP
 &trans      &kp LS(SPACE)  &none         &kp F14     &none
 &kp C       &kp D          &kp C         &kp D       &kp F         &kp G          &kp H       &kp I
-&kp UP      &kp INT3       &kp LS(INT3)  &none       &none         &kp LS(N5)     &kp INT3
+&kp UP      &kp INT3       &kp LS(INT1)  &none       &none         &kp LS(N5)     &kp INT3
 &kp DOWN    &kp LS(N3)     &none         &none       &none         &none          &kp SQT
 &kp RIGHT   &kp PSCRN      &kp LS(N6)    &none       &kp SEMI      &kp SQT        &none       &kp RSHIFT
 &kp LEFT    &mkp LCLK      &mkp RCLK     &kp N0      &kp KP_DOT    &none          &kp LBKT
@@ -238,9 +238,9 @@
 &kp LALT    &kp LC(LA(V))    &kp F4     &kp F5        &kp F6         &kp F11  &kp LEFT
 &kp LSHIFT  &kp LC(SEMI)     &kp F1     &kp F2        &kp F3         &kp F12  &kp C_MUTE  &kp DOWN
 &kp LCTRL   &kp LC(LA(DEL))  &none      &none         &kp DEL        &kp ESC  &kp UP
-&none       &none            &kp CAPS   &kp PSCRN     &kp ENTER
+&none       &none            &none      &kp PSCRN     &kp ENTER
 &kp C       &kp D            &kp C      &kp D         &kp F          &kp G    &kp H       &kp I
-&kp UP      &kp HOME         &kp PG_UP  &kp LC(SEMI)  &kp LC(COLON)  &tog 5   &kp INT3
+&kp UP      &kp HOME         &kp PG_UP  &kp LC(SEMI)  &kp LC(SQT)    &none    &kp INT3
 &kp DOWN    &kp END          &kp PG_DN  &none         &none          &none    &kp SQT
 &kp RIGHT   &kp PSCRN        &none      &none         &none          &none    &none       &kp RSHIFT
 &kp LEFT    &mkp LCLK        &mkp RCLK  &kp TAB       &kp RBKT       &none    &kp LBKT
@@ -253,15 +253,15 @@
 
         FUNCTION {
             bindings = <
-&kp TAB     &kp LG(LA(K))  &kp C_MUTE     &kp C_VOL_DN     &kp C_VOL_UP   &kp LBKT      &kp RIGHT
+&kp TAB     &kp LA(LG(K))  &kp C_MUTE     &kp C_VOL_DN     &kp C_VOL_UP   &kp RBKT      &kp RIGHT
 &kp LALT    &none          &none          &none            &none          &kp LS(N8)    &kp LEFT
-&kp LSHIFT  &none          &none          &none            &none          &kp LS(LBKT)  &kp C_MUTE  &kp DOWN
+&kp LSHIFT  &none          &none          &none            &none          &kp LS(RBKT)  &kp C_MUTE  &kp DOWN
 &kp LCTRL   &none          &none          &none            &kp DEL        &kp ESC       &kp UP
 &none       &none          &none          &kp PSCRN        &none
 &kp C       &kp D          &kp C          &kp D            &kp F          &kp G         &kp H       &kp I
-&kp UP      &kp RBKT       &kp LC(PG_UP)  &kp LG(UP)       &kp LC(PG_DN)  &none         &kp INT3
+&kp UP      &kp NUHS       &kp LC(PG_UP)  &kp LG(UP)       &kp LC(PG_DN)  &none         &kp INT3
 &kp DOWN    &kp LS(N9)     &kp LG(LEFT)   &kp LG(DOWN)     &kp LG(RIGHT)  &none         &kp SQT
-&kp RIGHT   &kp PSCRN      &kp LS(RBKT)   &kp LC(LS(TAB))  &kp LS(LG(S))  &kp LC(TAB)   &none       &kp RSHIFT
+&kp RIGHT   &kp PSCRN      &kp LS(NUHS)   &kp LC(LS(TAB))  &kp LS(LG(S))  &kp LC(TAB)   &none       &kp RSHIFT
 &kp LEFT    &mkp LCLK      &mkp RCLK      &kp TAB          &kp RBKT       &none         &kp LBKT
 &none       &mkp MCLK      &none          &none            &kp MINUS
 &kp C       &kp D          &kp E          &kp PSCRN        &kp G          &kp H         &kp G       &kp H
