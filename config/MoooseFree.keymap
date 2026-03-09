@@ -54,6 +54,18 @@
 // JP_QMARK  = LS(SLASH)   // ?
 // JP_UNDER  = LS(INT1)    // _
 
+&mt {
+    flavor = "hold-preferred";
+    tapping-term-ms = <220>;
+    quick-tap-ms = <120>;
+};
+
+&lt {
+    flavor = "hold-preferred";
+    tapping-term-ms = <220>;
+    quick-tap-ms = <120>;
+};
+
 / {
     macros {
         to_layer_0: to_layer_0 {
@@ -136,7 +148,9 @@
             bindings = <&mo>, <&to_layer_0>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <120>;
         };
 
         rot_kp: sensor_rotate_kp {
